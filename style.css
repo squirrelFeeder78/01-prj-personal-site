@@ -1,35 +1,152 @@
 /* Add you CSS here */
 
-/* Set a clean, modern font for the whole page */
+/* Set a clean, modern, and friendly font for the whole page */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9; /* Light background */
-  color: #222; /* Dark text for readability */
+  font-family: 'Segoe UI', Arial, sans-serif; /* Softer, friendlier font */
+  background-color: #ffe1aa; /* Light, soft orange background */
+  color: #4e2e0e; /* Warm dark brown text for readability */
   margin: 0;
   padding: 0;
+  position: relative;
+  /* Remove background-image here, use pseudo-element below */
 }
 
-/* Add some space around each section */
-section {
-  max-width: 600px; /* Limit width for better readability */
-  margin: 30px auto; /* Center sections on the page */
-  padding: 20px;
-  background-color: #fff; /* White background for sections */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle shadow */
+/* Show the background image only on the sides using a pseudo-element */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Allow clicks through overlay */
+  z-index: -1;
+  /* Only the background image, no gradient */
+  background: url('img/One Piece.png');
+  background-repeat: no-repeat;
+  background-size: 100vw auto; /* Full width, auto height */
+  background-attachment: fixed; /* Keep it fixed while scrolling */
+  background-position: left center, right center;
+  opacity: 0.05; /* Make the image subtle */
 }
 
-/* Style for the hero section */
+/* Hero section: gentle orange banner at the top */
 .hero {
-  text-align: center; /* Center text */
-  background-color: #e3f2fd; /* Light blue background */
-  padding-top: 40px;
-  padding-bottom: 40px;
+  width: 100vw; /* Full width */
+  height: 100vh; /* 50% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em; /* Larger text */
+  color: #4e2e0e; /* Warm dark brown text */
+  background-color: #ffd8a8; /* Gentle, soft orange */
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
-/* Make section headings stand out */
+/* Add more space between each section for a modern look */
+section {
+  text-align: center;
+  margin-bottom: 48px; /* More space below each section */
+  margin-top: 0;
+}
+
+/* Make sure section backgrounds don't overlap the hero */
+section:not(.hero) {
+  position: static;
+  top: 0;
+}
+
+/* About section: light orange background */
+.bio {
+  background-color: #ffe8cc; /* Very light orange */
+  margin-top: 48px; /* More space above */
+  margin-bottom: 48px; /* More space below */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding-left: 25%; /* More padding for a spacious feel */;
+  padding-right: 25%; /* More padding for a spacious feel */;
+  padding-top: 20px; /* Padding at the top */
+  padding-bottom: 20px; /* Padding at the bottom */
+  font-size: 1.2em; /* Slightly larger text for readability */
+  color: #4e2e0e; /* Warm dark brown text */
+  line-height: 1.6; /* More space between lines for readability */
+  border: 2px solid #ffb74d; /* Warm orange border */
+  /* Center the text in About Me */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content */
+  justify-content: center; /* Center the content vertically */
+  text-align: center; /* Center the text in About Me */
+}
+
+/* Skills section: soft peach background */
+.skills {
+  background-color: #fff2e0; /* Soft peach */
+  margin-top: 48px;
+  margin-bottom: 48px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  border: 2px solid #ffb74d; /* Warm orange border */
+}
+
+/* Projects section: light tan background */
+.projects {
+  background-color: #ffe5b4; /* Light tan/orange */
+  margin-top: 48px;
+  margin-bottom: 48px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 20px;
+  border: 2px solid #ffb74d; /* Warm orange border */
+}
+
+/* Display skill images side by side */
+.skills-images {
+  display: flex; /* Place images in a row */
+  justify-content: center; /* Center images horizontally */
+  gap: 16px; /* Space between images */
+  margin-bottom: 16px; /* Space below the images */
+}
+
+.skills-images img {
+  width: 60px; /* Set all skill images to the same size */
+  height: 60px;
+  object-fit: contain; /* Keep image aspect ratio */
+  background: #fff8ee; /* Light background for images */
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Project cards container: display cards side by side */
+.project-cards {
+  display: flex; /* Place cards in a row */
+  justify-content: center; /* Center cards horizontally */
+  gap: 24px; /* Space between cards */
+  flex-wrap: wrap; /* Allow cards to wrap on small screens */
+  margin-top: 24px;
+}
+
+/* Individual project card styling */
+.project-card {
+  background-color: #fff2e0; /* Soft peach for cards */
+  border-radius: 10px;
+  border: 2px solid #ffb74d; /* Warm orange border */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 260px; /* Fixed width for each card */
+  text-align: left;
+  color: #4e2e0e;
+  font-size: 1em;
+}
+
+/* Make section headings stand out with a warm brown */
 h2 {
-  color: #1976d2; /* Blue color for headings */
+  color: #b05e19; /* Warm brown color for headings */
   margin-top: 0;
 }
 
@@ -44,4 +161,74 @@ h2 {
 .skills li,
 .projects li {
   margin-bottom: 10px;
+}
+
+/* Center all section content */
+section {
+  text-align: center;
+}
+
+/* Simple navigation bar styles */
+.navbar {
+  width: 100%;
+  background-color: #ffb74d; /* Warm orange */
+  padding: 12px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Style for navigation links */
+.navbar a {
+  color: #4e2e0e; /* Warm brown text */
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #b05e19; /* Darker orange on hover */
+}
+
+/* Footer styles */
+footer {
+  background-color: #ffd8a8; /* Gentle orange */
+  color: #4e2e0e; /* Warm brown text */
+  text-align: center;
+  padding: 8px 0; /* Shorter footer */
+  border-top: 2px solid #ffb74d;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* Space between items */
+}
+
+/* Separator style for footer */
+.footer-separator {
+  margin: 0 8px;
+  color: #b05e19;
+  font-weight: bold;
+}
+
+/* Style footer links */
+footer a {
+  color: #b05e19;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Each skill image and its label stacked vertically */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+  color: #b05e19; /* Warm brown for the label */
 }

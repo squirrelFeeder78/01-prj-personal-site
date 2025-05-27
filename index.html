@@ -6,50 +6,89 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Hero section: Your name and a short tagline -->
-  <section class="hero">
-    <h1>Natnael Haileselassie</h1>
-    <p>Aspiring Web Developer</p>
-  </section>
+  <!-- Navigation bar at the top -->
+  <nav class="navbar">
+    <!-- Simple navigation links to each section -->
+    <a href="#hero">Home</a>
+    <a href="#bio">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <!-- Bio section: A short paragraph about yourself -->
-  <section class="bio">
+  <!-- Hero section: Your name and a short tagline -->
+  <section class="hero" id="hero">
+    <!-- Main heading with your name -->
+    <h1>Hello! My name is Natnael Haileselassie</h1>
+    <!-- Short description or tagline -->
+    <p>I'm an aspiring Web Developer. Check out my projects</p>
+  </section>
+  
+  <!-- Projects section: List your projects (now with a light tan background) -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <!-- Project cards displayed side by side -->
+    <div class="project-cards">
+      <!-- Each project is inside a card -->
+      <div class="project-card">
+        <strong>Academic Advising System</strong><br>
+        <span>Created a topological sort to organize lists based on priorities associated with each item. For a list of classes, it takes into consideration the prerequisites of each class and returns a possible order for a set of classes to be taken in. Implemented a MinHeap to determine priorities.</span>
+      </div>
+      <div class="project-card">
+        <strong>Decoding Binary</strong><br>
+        <span>Implemented validation methods to ensure correct values were input. Decodes 34 bit binary sequence using a predetermined pattern. Reads from a file containing binary sequences and outputs re-formatted data into a separate text file.</span>
+      </div>
+      <div class="project-card">
+        <strong>MiniCheckers</strong><br>
+        <span>Designed program MiniCheckers which simulates a simplified version of checkers. Game has options of player vs player or player vs AI computer. Utility methods used to indicate if a game is won or lost, possible moves, promotion of pieces. AI is powered with recursion to choose their moves.</span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills section: List your skills (now with a soft peach background) -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <!-- Display skill images side by side, each with a word below -->
+    <div class="skills-images">
+      <div class="skill-item">
+        <img src="img/HTML.png" alt="HTML Logo">
+        <div>HTML</div>
+      </div>
+      <div class="skill-item">
+        <img src="img/CSS.png" alt="CSS Logo">
+        <div>CSS</div>
+      </div>
+      <div class="skill-item">
+        <img src="img/JS.png" alt="JavaScript Logo">
+        <div>JavaScript</div>
+      </div>
+      <div class="skill-item">
+        <img src="img/Code.png" alt="Code Logo">
+        <div>Java/C</div>
+      </div>
+      <div class="skill-item">
+        <img src="img/Database.png" alt="Database Logo">
+        <div>Database</div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About section: A short paragraph about yourself (now with a warm orange background) -->
+  <section class="bio" id="bio">
     <h2>About Me</h2>
-    <p>An Applied Computer Science Major at George Mason University. I love building websites and programming. My hope is to
-      work in the tech industry, contributing to innovative projects and learning from experienced professionals. I am passionate about coding, problem-solving, and continuous learning.</p>
+    <!-- Brief introduction -->
+    <p>
+      An Applied Computer Science Major at George Mason University. I love building websites and programming. My hope is to
+      work in the tech industry, contributing to innovative projects and learning from experienced professionals. I am passionate about coding, problem-solving, and continuous learning.
     </p>
   </section>
 
-  <!-- Skills section: List your skills -->
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>C</li>
-      <li>Java</li>
-      <li>JavaScript</li>
-      <li>SQL</li>
-    </ul>
-  </section>
-
-  <!-- Projects section: List your projects -->
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Academic Advising System</strong><br>
-        <span>Created a topological sort to organize lists based on priorities associated with each item. For a list of classes, it takes into consideration the prerequisites of each class and returns a possible order for a set of classes to be taken in. Implemented a MinHeap to determine priorities.</span>
-      </li>
-      <li>
-        <strong>Decoding Binary</strong><br>
-        <span>Implemented validation methods to ensure correct values were input. Decodes 34 bit binary sequence using a predetermined pattern. Reads from a file containing binary sequences and outputs re-formatted data into a separate text file.</span>
-      </li>
-      <li>
-        <strong>MiniCheckers</strong><br>
-        <span>Designed program MiniCheckers which simulates a simplified version of checkers. Game has options of player vs player or player vs AI computer. Utility methods used to indicate if a game is won or lost, possible moves, promotion of pieces. AI is powered with recursion to choose their moves.</span>
-      </li>
-    </ul>
-  </section>
+  <!-- Footer with contact information -->
+  <footer id="contact">
+    <!-- Contact and LinkedIn on the same line -->
+    <span>Contact: nhaileselassie01@gmail.com</span>
+    <span class="footer-separator">|</span>
+    <span>LinkedIn: <a href="https://www.linkedin.com/in/natnael-haileselassie-58a3802b2/" target="_blank">Click Here!</a></span>
+  </footer>
 </body>
 </html>
