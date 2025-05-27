@@ -1,1 +1,47 @@
 /* Add you CSS here */
+
+/* Set a clean, modern font for the whole page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Light background */
+  color: #222; /* Dark text for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Add some space around each section */
+section {
+  max-width: 600px; /* Limit width for better readability */
+  margin: 30px auto; /* Center sections on the page */
+  padding: 20px;
+  background-color: #fff; /* White background for sections */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+/* Style for the hero section */
+.hero {
+  text-align: center; /* Center text */
+  background-color: #e3f2fd; /* Light blue background */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Make section headings stand out */
+h2 {
+  color: #1976d2; /* Blue color for headings */
+  margin-top: 0;
+}
+
+/* Style the skills and projects lists */
+.skills ul,
+.projects ul {
+  list-style-type: disc; /* Bullet points */
+  padding-left: 20px;
+}
+
+/* Add a little space between list items */
+.skills li,
+.projects li {
+  margin-bottom: 10px;
+}
